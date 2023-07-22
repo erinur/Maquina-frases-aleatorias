@@ -6,30 +6,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./index.css">
     <script src="https://kit.fontawesome.com/7e55d565b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="./index.js"></script>
     <title>Maquina de frases aleatorias</title>
   </head>
-  <body class="backgroundColor randomColor" onload="newQuote()">
+  <body>
     <main>
       <div id="quote-box">
         <div id="text">
           <i class="fa fa-quote-left"></i> 
-          <span id="main-quote">Aqui iría la frase aleatoria Aqui iría la frase aleatoria Aqui iría la frase aleatoria Aqui iría la frase aleatoria</span>
+          <span id="quote"></span>
         </div>
         <div id="author">
           Nombre autor
         </div>
-        <div class="buttons">
-          <a id='tweet-quote' class="button randomColor" href="twitter.com/intent/tweet">
-            <i class="fa-brands fa-square-twitter"></i>
-          </a>
-          <a id='tumblr-quote' class="button randomColor" href="#">
-            <i class="fa-brands fa-square-tumblr"></i>
-          </a>
-        </div>
-        <div id="new-quote" class="backgroundColor" onclick="newQuote()">
+        <div id="new-quote" class="button">
           New quote
         </div>
+        <div class="buttons">
+          <a id='tweet-quote' class="icons button" href="twitter.com/intent/tweet">
+            <i class="fa-brands fa-twitter"></i>          </a>
+          <a id='tumblr-quote' class="icons button" href="#">
+            <i class="fa-brands fa-tumblr"></i>
+          </a>
+        </div>
+        
       </div>
     </main>
   </body>

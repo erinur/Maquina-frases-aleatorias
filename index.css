@@ -83,13 +83,14 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
   background-color: #333;
   color:#333
 }
 
 #quote-box {
   display: grid;
-  grid-template-columns: 4rem 14rem 6rem;
+  grid-template-columns: 4rem 20rem 6rem;
   grid-template-rows: auto 2rem 2rem;
   padding: 2rem;
   border-radius: 4px;
@@ -102,15 +103,10 @@ body {
   padding-bottom: 1rem;
   text-align: center;
   font-weight: 500;
-  font-size: 24px;
-}
-
-#text i {
   font-size: 2rem;
 }
 
 #text span {
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -118,7 +114,6 @@ body {
   grid-column: 2/4;
   grid-row: 2;
   text-align: right;
-  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -128,23 +123,73 @@ body {
 }
 
 .button {
-  display: block;
-  float: left;
-  line-height: 0px;
-  font-size: 2rem;
+  display: inline-block;
+  font-weight: 500;
+  height: 2rem;
+  color:#fff;
+  background-color: #333;
+  padding-top: 0.25rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity:0.7;
+}
+
+.icons {
+  width: 2rem;
   margin-right: 0.5rem;
-  color:#333;
 }
 
 #new-quote {
   grid-column: 3;
   grid-row: 3;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #333;
-  text-align: center;
 }
 
-#new-quote:hover {
-  cursor: pointer;
+@media only screen and (max-width: 560px){
+
+  body {
+    font-size: 0.875rem;
+  }
+
+  #quote-box {
+    width: 360px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  #text {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #author {
+    text-align: center;
+    margin-bottom: 1rem;
+
+  }
+
+  .buttons {
+    grid-column: 1;
+    grid-row: 4;
+    margin-bottom: 1rem;
+    border: 1px solid red;
+    text-align: center;
+
+  }
+
+  #new-quote {
+    grid-column: 1;
+    grid-row: 3;
+    margin-bottom: 1rem;
+    border: 1px solid red;
+  }
 }
